@@ -10,13 +10,11 @@ def test_if_true():
 def test_another_sum():
     assert another_sum(3, 2) == 5
 
-# def test_create_table():
-#     assert execute_query(create_testable) == True
+def test_create_table():
+    assert execute_query(create_testable)
 
-# select_chill = """
-#     Select name from heroes
-#     where name = 'Chill Woman'
-# """
+def test_delete_testable():
+    assert execute_query(delete_testable)
 
 # WORKING WITH SELECT_CHILL IN READ.PY
 def test_hero_return_chill():

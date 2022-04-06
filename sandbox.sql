@@ -6,10 +6,14 @@ create table TESTABLE (
     ability varchar
 )
 """
-execute_query(create_testable)
-
 
 -- DELETES TESTABLE THAT WAS CREATED --
 delete_testable = """
 drop table testable
+"""
+
+-- CREATES A NEW ABILITY --
+create_ability = """
+INSERT INTO ability_types
+VALUES(DEFAULT, 'Cloning')
 """
