@@ -1,5 +1,5 @@
-import sys
-sys.path.append("/workspace/superhero-sql")
+#import sys
+#sys.path.append(".")
 from connections.connection import execute_query
 
 ## CREATE NEW CHARACTER ##
@@ -8,7 +8,7 @@ def create():
     INSERT INTO heroes
     VALUES(DEFAULT, '{0}', '{1}', '{2}')
     """
-    execute_query(create_new_character.format('hello there 12', 'not sure', 'try again'))
+    execute_query(create_new_character.format('hello there 38', 'not sure', 'try again'))
 
-print("Does this happen twice?")
-create()
+
+#create()

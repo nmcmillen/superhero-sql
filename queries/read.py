@@ -22,13 +22,14 @@ chill = execute_query(select_chill).fetchone()
 print("Printing Chill Woman: " + (chill[0]))
 
 ## PRINT THE ENEMIES OF A HERO (SPECIFIC TO THE HUMMINGBIRD) ##
+# def select_enemy():
 select_enemies = """
     SELECT name
     FROM heroes
     WHERE id IN (
-		SELECT hero2_id
-		FROM relationships
-		WHERE hero1_id = 4 AND relationship_type_id = 2);
+        SELECT hero2_id
+        FROM relationships
+        WHERE hero1_id = 4 AND relationship_type_id = 2);
 """
 enemy = execute_query(select_enemies).fetchall()
 for enemies in enemy:
