@@ -28,7 +28,7 @@ def create_new_character():
     INSERT INTO heroes
     VALUES(DEFAULT, '{0}', '{1}', '{2}')
     """
-    execute_query(create_character.format('Testman', 'I can karate chop through anything like its a warm stick of butter', 'I grew up in the kitchen without any knives. All I had was the power of my hands and the ability to master THE CHOP'))
+    execute_query(create_character.format('Testman', 'Test about', 'asomethinaglsdfnplwaejfj'))
 
 
 
