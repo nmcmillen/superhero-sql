@@ -11,25 +11,22 @@ def create_test_table():
     """
     execute_query(new_test_table)
 
-## CREATES NEW ABILITY BY PASSING IN PARAMETER WITH .FORMAT ##
-def create_ability_type():
-    new_ability = """
+
+## CREATES NEW ABILITY BY PASSING IN PARAMETER ##
+def create_ability_type(ability):
+    execute_query("""
     INSERT INTO ability_types
-    VALUES(DEFAULT, '{0}')
-    """
-
-    execute_query(new_ability.format('Pure Strength'))
-    # USING 'FLYING' AS FIRST PARAMETER. CAN ADD MORE 2,3, ETC.
+    VALUES(DEFAULT, %(new_ability)s)
+    """,
+    {'new_ability': ability})
 
 
-## CREATE A NEW CHARACTER WITH NAME, ABOUT ME, and BIO PARAMETERS ##
-def create_new_character():
-    create_character = """
+def create_new_character(name, about, bio):
+    execute_query("""
     INSERT INTO heroes
-    VALUES(DEFAULT, '{0}', '{1}', '{2}')
-    """
-    execute_query(create_character.format('Testman', 'Test about', 'asomethinaglsdfnplwaejfj'))
-
+    VALUES(DEFAULT, %(new_name)s, %(new_about)s, %(new_bio)s)
+    """,
+    {'new_name': name, 'new_about': about, 'new_bio': bio})
 
 
 # create_test_table()
