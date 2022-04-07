@@ -1,5 +1,5 @@
 # This is why you'll execute a series of SQL statements during demo day.
-#from connections.connection import execute_query
+from connections.connection import execute_query
 
 # select_heroes = """
 #     SELECT * FROM heroes
@@ -36,12 +36,15 @@
 
 # print(sql1.format('Spot','Dogs', 'Owners', 'DogID', 'Speed'))
 
-#create_ability = """
-#INSERT INTO ability_types
-#VALUES(DEFAULT, '{0}')
-#"""
+def createability():
+    create_ability = """
+    INSERT INTO ability_types
+    VALUES(DEFAULT, '{0}')
+    """
 
-#execute_query(create_ability.format('Flying'))
+    execute_query(create_ability.format('X-Ray Vision'))
 
-import queries.different_name as dn
-dn.create()
+createability()
+
+# import queries.different_name as dn
+# dn.create()
