@@ -38,9 +38,25 @@ def delete_hero_by_name():
     delete_a_hero(name)
     print(name + ' has been eliminated')
 
+## PROMPT TO SEARCH FRIENDS ##
+def friendship_search():
+    print('Choose a character name to see who their friends are:')
+    show_all_heroes()
+    name = input()
+    show_specific_friends(name)
+
+## PROMPT TO SEARCH ENEMIES ##
+def enemy_search():
+    print('Choose a character name to see who their friends are:')
+    show_all_heroes()
+    name = input()
+    show_specific_enemies(name)
+
 
 # add_ability()
 # change_about_section()
 # create_character()
 # delete_hero_by_name()
+# friendship_search()
+# enemy_search()
 
