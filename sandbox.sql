@@ -37,3 +37,7 @@ VALUES(DEFAULT, 'Cloning')
 -- #     print('0' now has been created and their bio says '2')
 -- #     """.format(name, about, bio)
 -- #     execute_query(create_character)
+
+SELECT heroes.name, relationships.hero1_id, relationships.hero2_id, relationships.relationship_type_id
+FROM heroes
+RIGHT OUTER JOIN relationships ON heroes.id=relationships.hero1_id where relationship_type_id=1

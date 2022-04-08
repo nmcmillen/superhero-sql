@@ -5,19 +5,18 @@ def delete_test_table():
     delete_testable = """
     DROP TABLE TESTABLE
     """
-
     execute_query(delete_testable)
 
 
 ## DELETE A HERO BY NAME
-def delete_a_hero():
-    bye_hero = """
+def delete_a_hero(name):
+    execute_query("""
     DELETE FROM heroes
-    WHERE name = '{0}'
-    """
-    execute_query(bye_hero.format('Testman'))
+    WHERE name = %(eliminate)s
+    """,
+    {'eliminate': name})
 
 
 # delete_test_table()
-delete_a_hero()
+# delete_a_hero()
 

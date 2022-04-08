@@ -29,7 +29,18 @@ def change_about_section():
     about = input()
     update_hero_about(name, about)
 
+
+## PROMPT TO DELETE HERO BY NAME ##
+def delete_hero_by_name():
+    print('You have the powers to eliminate one hero, who will it be?')
+    show_all_heroes()
+    name = input()
+    delete_a_hero(name)
+    print(name + ' has been eliminated')
+
+
 # add_ability()
 # change_about_section()
 # create_character()
+# delete_hero_by_name()
 

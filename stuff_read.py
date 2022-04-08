@@ -1,11 +1,12 @@
 from connections.connection import execute_query
 
-## JOSH'S PRINT EXAMPLE TO SHOW ALL SUPER HEROES ##
+## SHOW ALL SUPER HEROES ##
 def show_all_heroes():
-    select_heroes = """
+    show_heroes = """
         SELECT * FROM heroes
+        ORDER BY name ASC
     """
-    heroes = execute_query(select_heroes).fetchall()
+    heroes = execute_query(show_heroes).fetchall()
     print("The Superheroes Are:")
     for hero in heroes:
         print("- " + hero[1])
@@ -17,7 +18,6 @@ def print_hero_name():
         Select name from heroes
         where name = 'Chill Woman'
     """
-
     chill = execute_query(select_chill).fetchone()
     print("Printing Chill Woman: " + (chill[0]))
 
