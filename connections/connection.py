@@ -18,12 +18,12 @@ def create_connection(db_name, db_user, db_password, db_host = "localhost", db_p
 
 connection = create_connection("postgres", "postgres", "postgres")
 
-def execute_query(query):
+def execute_query(query, params=None):
     cursor = connection.cursor()
     try:
-        cursor.execute(query)
+        cursor.execute(query, params)
         connection.commit()
         print("Query executed successfully")
         return cursor
-    except Error as e:
+    except OperationalError as e:
         print(f"The error '{e}' occurred")
